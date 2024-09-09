@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import hospitalData from "@/data/data_exemple1.JSON";
-import medicationData from "@/data/data_exemple2.JSON";
-import researchData from "@/data/data_exemple3.JSON";
+import hospitalData from "@/data/data_exemple1.json";
+import medicationData from "@/data/data_exemple2.json";
+import researchData from "@/data/data_exemple3.json";
 import { AllData } from "@/types/dataTypes";
 
 interface DataState {
@@ -13,9 +13,9 @@ interface DataState {
 }
 
 const initialState: DataState = {
-  hospital: hospitalData,
-  medication: medicationData,
-  research: researchData,
+  hospital: hospitalData as unknown as AllData[],
+  medication: medicationData as unknown as AllData,
+  research: researchData as unknown as AllData[],
   selectedHospital: 0,
   selectedResearch: 0,
 };
