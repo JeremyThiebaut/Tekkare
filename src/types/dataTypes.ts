@@ -6,7 +6,6 @@ export type HospitalData = {
     satisfactionRate: string;
     numberOfDoctors: number;
     averageLengthOfStay: number;
-    name: string;
   };
   monthlyHospitalizations: Array<{
     year: number;
@@ -15,6 +14,8 @@ export type HospitalData = {
   }>;
   doctorSpecialties: Array<{ specialty: string; count: number }>;
   patientAgeDistribution: Array<{ ageRange: string; count: number }>;
+  id: number;
+  name: string;
 };
 
 export type MedicationData = {
@@ -28,6 +29,8 @@ export type MedicationData = {
       category: string;
     }>;
   }>;
+  id: number;
+  name: string;
 };
 
 export type ResearchData = {
@@ -46,8 +49,10 @@ export type ResearchData = {
     journal: string | Iterable<string>;
     publicationDate: string | Iterable<string>;
     title: string;
-    field: string 
+    field: string;
   }>;
+  id: number;
+  name: string;
 };
 
 export type AllData = HospitalData | MedicationData | ResearchData;
