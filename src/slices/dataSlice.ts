@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import hospitalData from "@/data/data_exemple1.json";
-import medicationData from "@/data/data_exemple2.json";
-import researchData from "@/data/data_exemple3.json";
+import hospitalData from "@/datas/data_exemple1.json";
+import medicationData from "@/datas/data_exemple2.json";
+import researchData from "@/datas/data_exemple3.json";
 import { AllData } from "@/types/dataTypes";
 
 interface DataState {
