@@ -77,7 +77,7 @@ export default function Dashboard() {
             >
               {data.hospital.map((hospital, index) => (
                 <option key={index} value={index}>
-                  {/* {hospital.name} */}
+                  {hospital.name}
                 </option>
               ))}
             </select>
