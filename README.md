@@ -1,41 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tableau de Bord Médical
 
-## Getting Started
+## Description du Projet
 
-First, run the development server:
+Ce projet est un tableau de bord médical interactif développé avec Next.js et TypeScript. Il permet de visualiser et d'analyser des données relatives aux hôpitaux, aux médicaments et à la recherche médicale.
 
-```bash
+## Choix Techniques
+
+- **Next.js** : Choisi pour son rendu côté serveur, son routage intégré et son optimisation des performances.
+- **React** : Utilisé comme base pour la création d'interfaces utilisateur dynamiques.
+- **TypeScript** : Employé pour ajouter un typage statique, améliorant la maintenabilité et réduisant les erreurs potentielles.
+- **Redux** : Intégré pour la gestion globale de l'état de l'application.
+- **i18next** : Utilisé pour l'internationalisation, permettant une prise en charge multilingue.
+- **Tailwind CSS** : Choisi pour un styling rapide et cohérent.
+
+## Prérequis
+
+- Node.js (version 18 ou supérieure)
+- npm ou yarn
+
+## Installation
+
+1. Clonez le dépôt :
+
+   ```
+   git clone git@github.com:JeremyThiebaut/Tekkare.git
+   ```
+
+2. Naviguez dans le dossier du projet :
+
+   ```
+   cd Tekkare
+   ```
+
+3. Installez les dépendances :
+   ```
+   npm install
+   ```
+   ou
+   ```
+   yarn install
+   ```
+
+## Exécution du Projet
+
+Pour lancer l'application en mode développement :
+
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ou
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+yarn dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+L'application sera accessible à l'adresse `http://localhost:3000`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Structure du Projet
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `src/pages` : Contient les pages principales de l'application.
+- `src/components` : Regroupe les composants réutilisables.
+- `src/utils` : Contient les fonctions utilitaires.
+- `src/types` : Définit les types TypeScript utilisés dans l'application.
+- `src/slices` : Contient les slices Redux pour la gestion de l'état.
+- `src/store` : Configure le store Redux.
 
-## Learn More
+## Fonctionnalités Principales
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Tekkare
+- Visualisation de données pour les hôpitaux, médicaments et projets de recherche.
+- Filtrage des données par date, terme de recherche et spécialité.
+- Affichage de KPIs et de graphiques dynamiques.
+- Support multilingue.
