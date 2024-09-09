@@ -13,6 +13,12 @@ interface DashboardChartsProps {
   filteredData: AllData;
 }
 
+interface ResearchTeamMember {
+  name: string;
+  role: string;
+  specialty: string;
+}
+
 export default function DashboardCharts({
   dataSet,
   filteredData,
@@ -168,14 +174,16 @@ export default function DashboardCharts({
                   <h5 className="font-medium text-gray-800 mt-4 mb-2">
                     {t("researchTeam")}
                   </h5>
-                  {filteredData.researchTeam.map((member, index: number) => (
-                    <div key={index} className="mb-2">
-                      <p className="text-sm text-gray-800">{member.name}</p>
-                      <p className="text-xs text-gray-600">
-                        {member.role} - {member.specialty}
-                      </p>
-                    </div>
-                  ))}
+                  {(filteredData.researchTeam as unknown as ResearchTeamMember[]).map(
+                    (member: ResearchTeamMember, index) => (
+                      <div key={index} className="mb-2">
+                        <p className="text-sm text-gray-800">{member.name}</p>
+                        <p className="text-xs text-gray-600">
+                          {member.role} - {member.specialty}
+                        </p>
+                      </div>
+                    )
+                  )}
                   <h5 className="font-medium text-gray-800 mt-4 mb-2">
                     {t("publications")}
                   </h5>
@@ -201,4 +209,10 @@ export default function DashboardCharts({
       {renderCharts()}
     </div>
   );
+}
+
+interface ResearchTeamMember {
+  name: string;
+  role: string;
+  specialty: string;
 }
